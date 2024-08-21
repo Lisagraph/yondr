@@ -1,0 +1,910 @@
+@charset "UTF-8";
+
+html, body{
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background: #D8E5EE;
+}
+
+/* hide scrollbar but allow scrolling */
+body::-webkit-scrollbar, #iPhscrollDiv::-webkit-scrollbar, #iPhcontent::-webkit-scrollbar, .iPhfixed::-webkit-scrollbar, #scrollDiv::-webkit-scrollbar, #bfix::-webkit-scrollbar, #inScroll::-webkit-scrollbar, #content::-webkit-scrollbar{
+  	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+  	scrollbar-width: none; /* for Firefox */
+  	overflow-y: scroll; 
+  	display: none; /* for Chrome, Safari, and Opera */
+}
+
+h1, h2, h3, h4, p{
+	color: #05004d;
+}
+
+h1, h2, h3, h4{
+	text-align: center;
+}
+
+h1{
+	font-size: 1.8em;
+	line-height: 1.5em;
+	padding: 0 25px;
+	letter-spacing: 3px;
+}
+
+h2{
+	font-size: 2.1em;
+	line-height: 1.1em;
+	padding: 0 25px;
+	letter-spacing: 3px;
+}
+
+h3{
+	font-size: 2em;
+	line-height: 1em;
+	padding: 0 25px;
+	letter-spacing: 3.5px;
+}
+
+h4{
+	font-size: 1.3em;
+	line-height: 1.5em;
+	padding: 0 15px;
+	font-weight: 600;
+	letter-spacing: 1.3px;
+}
+
+p{
+	font-size: 1em;
+	line-height: 1.7em;
+	font-weight: 500;
+	text-align: left;
+	padding: 5px 25px;
+	letter-spacing: 1.6px;
+}
+
+/* Nav styling start */
+.navHeader{
+	position: fixed;
+	width: 100%;
+	height: 5vh;
+	top: 0;
+	background: rgba( 255, 255, 255, 0.01);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	z-index: 9999 !important;
+	-webkit-box-shadow: -1px 11px 5px -3px rgba(5,0,77,0.37);
+	-moz-box-shadow: -1px 11px 5px -3px rgba(5,0,77,0.37);
+	box-shadow: -1px 11px 5px -3px rgba(5,0,77,0.37);
+	z-index: 9;
+}
+
+.NavThird1, .NavThird2, .NavThird3{
+	position: relative;
+	width: 33.33%;
+	height: 5vh;
+	top: 0;
+	left: 0;
+	float: left;
+}
+
+.headBtn{
+	width: 33.33%;
+	height: 100%;
+	align-content: center;
+	float: left;
+}
+
+.headBtnInner{
+	position: relative;
+  	top: 1.5px;
+  	left: 18%;
+  	width: 50%;
+  	height: 40px;
+  	align-content: center;
+  	border: #05004d solid 3px;
+  	border-radius: 25px;
+	font-size: .75em;
+	line-height: 3.5em;
+	text-align: center;
+	margin: 0 2px;
+	font-weight: 900;
+	letter-spacing: 1.2px;
+	color: #05004d;
+}
+
+.headBtnInner:hover{
+  	border: #6364ff solid 3px;
+  	color: #6364ff;
+  	background: #fff;
+}
+
+.headBtnInner:hover, .headBtnInner:hover a{
+	color: #6364ff !important;
+	background: #fff;
+}
+/* Nav styling end */
+
+/* Sydney setup start */
+.SydSec{
+	position: fixed;
+	width: 100%;
+	height: 80vh;
+	bottom: 2vh;
+	background: transparent;
+	z-index: -1;
+}
+
+.Hbridge, .OH, .Back1, .Back2, .Back4, .Back5, .Back6, .Center1, .Front1, .Front2, .Front3, .Front4, .centrepoint, .Center2, .Center3{
+	position: fixed;
+	bottom: 3vh;
+	z-index: -1;
+	height: 55vh;
+}
+
+.Hbridge{
+	right: 6vw;
+	width: 30%;
+}
+
+.OH{
+	right: 2vw;
+	width: 30%;
+}
+
+.Back1{
+	right: 38vw;
+	width: 5%;
+}
+
+.Back2{
+	right: 43vw;
+	width: 7%;
+}
+
+.Back3{
+	position: fixed;
+	bottom: 3vh;
+	z-index: -1;
+	right: 50vw;
+	width: 7%;
+	height: 35vh;
+}
+
+.Back4{
+	right: 58vw;
+	width: 7%;
+}
+
+.Back5{
+	right: 68vw;
+	width: 7%;
+}
+
+.Back6{
+	right: 85.1vw;
+	width: 5%;
+}
+
+.Center1{
+	right: 39vw;
+	width: 13%;
+}
+
+.Front1{
+	right: 33vw;
+	width: 6%;
+}
+
+.Front2{
+	right: 40.5vw;
+	width: 5%;
+}
+
+.Front3{
+	right: 46.7vw;
+	width: 5%;
+}
+
+.Front4{
+	right: 53.7vw;
+	width: 6%;
+}
+
+.centrepoint{
+	right: 64vw;
+	width: 7%;
+}
+
+.Center2{
+	right: 73.9vw;
+	width: 12.1%;
+}
+
+.Center3{
+	right: 89vw;
+	width: 11%;
+}
+
+/* scrim */
+.SphTop{
+	position: fixed;
+	bottom: 4vh;
+	left: 0;
+	width: 100%;
+	height: 95vh;
+	background-color: #D8E5EE;
+	opacity: .94;
+	z-index: -1;
+}
+/* Sydney setup end */
+
+.vidStyle{
+	border-radius: 20px !important;
+}
+
+.textLink:hover a{
+	background: #fff !important;
+	color: #05004d !important;
+}
+
+/* figures screen start */
+/* charOutCon1 is outer container for open/close div and dropdown */
+.charOutCon1, .charOutCon2, .charOutCon3, .charOutCon4, .charOutCon5, .charOutCon6, .charOutCon7, .charOutCon8, .charOutCon9, .charOutCon10, .charOutCon11, .charOutCon12, .charOutCon13, .charOutCon14, .charOutCon15, .charOutCon16, .charOutCon17, .charOutCon18, .charOutCon19, .charOutCon20, .charOutCon21, .charOutCon22, .charOutCon23, .charOutCon24, .charOutCon25, .charOutCon26, .charOutCon27, .charOutCon28, .charOutCon29, .charOutCon30, .charOutCon31, .charOutCon32, .charOutCon33, .charOutCon34, .charOutCon35, .charOutCon36, .charOutCon37, .charOutCon38, .charOutCon39, .charOutCon40{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 10%;
+	height: 55px;
+	align-content: center;
+	float: left;
+}
+
+.charBtn1, .charBtn2, .charBtn3, .charBtn4, .charBtn5, .charBtn6, .charBtn7, .charBtn8, .charBtn9, .charBtn10, .charBtn11, .charBtn12, .charBtn13, .charBtn14, .charBtn15, .charBtn16, .charBtn17, .charBtn18, .charBtn19, .charBtn20, .charBtn21, .charBtn22, .charBtn23, .charBtn24, .charBtn25, .charBtn26, .charBtn27, .charBtn28, .charBtn29, .charBtn30, .charBtn31, .charBtn32, .charBtn33, .charBtn34, .charBtn35, .charBtn36, .charBtn37, .charBtn38, .charBtn39, .charBtn40{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	align-content: center;
+	background-color: transparent;
+	float: left;
+}
+/* a#charBar1 is the visible clickable div area (include character outlines in these) */
+a#charBar1, a#charBar2, a#charBar3, a#charBar4, a#charBar5, a#charBar6, a#charBar7, a#charBar8, a#charBar9, a#charBar10, a#charBar11, a#charBar12, a#charBar13, a#charBar14, a#charBar15, a#charBar16, a#charBar17, a#charBar18, a#charBar19, a#charBar20, a#charBar21, a#charBar22, a#charBar23, a#charBar24, a#charBar25, a#charBar26, a#charBar27, a#charBar28, a#charBar29, a#charBar30, a#charBar31, a#charBar32, a#charBar33, a#charBar34, a#charBar35, a#charBar36, a#charBar37, a#charBar38, a#charBar39, a#charBar40{
+  	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+  	background-color: transparent;
+	float: left;
+}
+
+.charBarCon1, .charBarCon2, .charBarCon3, .charBarCon4, .charBarCon5, .charBarCon6, .charBarCon7, .charBarCon8, .charBarCon9, .charBarCon10, .charBarCon11, .charBarCon12, .charBarCon13, .charBarCon14, .charBarCon15, .charBarCon16, .charBarCon17, .charBarCon18, .charBarCon19, .charBarCon20, .charBarCon21, .charBarCon22, .charBarCon23, .charBarCon24, .charBarCon25, .charBarCon26, .charBarCon27, .charBarCon28, .charBarCon29, .charBarCon30, .charBarCon31, .charBarCon32, .charBarCon33, .charBarCon34, .charBarCon35, .charBarCon36, .charBarCon37, .charBarCon38, .charBarCon39, .charBarCon40{
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	align-content: center;
+  	background-color: transparent;
+}
+
+/* charDiv is div that opens on click (include colour characters) */
+#charDiv1, #charDiv2, #charDiv3, #charDiv4, #charDiv5, #charDiv6, #charDiv7, #charDiv8, #charDiv9, #charDiv10, #charDiv11, #charDiv12, #charDiv13, #charDiv14, #charDiv15, #charDiv16, #charDiv17, #charDiv18, #charDiv19, #charDiv20, #charDiv21, #charDiv22, #charDiv23, #charDiv24, #charDiv25, #charDiv26, #charDiv27, #charDiv28, #charDiv29, #charDiv30, #charDiv31, #charDiv32, #charDiv33, #charDiv34, #charDiv35, #charDiv36, #charDiv37, #charDiv38, #charDiv39, #charDiv40{
+ 	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center; 
+  	background-color: transparent;
+  	z-index: 99;
+	float: left;
+	pointer-events: none;
+}
+
+.charDivCon1, .charDivCon2, .charDivCon3, .charDivCon4, .charDivCon5, .charDivCon6, .charDivCon7, .charDivCon8, .charDivCon9, .charDivCon10, .charDivCon11, .charDivCon12, .charDivCon13, .charDivCon14, .charDivCon15, .charDivCon16, .charDivCon17, .charDivCon18, .charDivCon19, .charDivCon20, .charDivCon21, .charDivCon22, .charDivCon23, .charDivCon24, .charDivCon25, .charDivCon26, .charDivCon27, .charDivCon28, .charDivCon29, .charDivCon30, .charDivCon31, .charDivCon32, .charDivCon33, .charDivCon34, .charDivCon35, .charDivCon36, .charDivCon37, .charDivCon38, .charDivCon39, .charDivCon40{
+	position: relative;
+	margin: 0 25%;
+	width: 50%;
+	height: 100%;
+	align-content: center;
+	float: left;
+}
+/* figures screen end */
+
+/* scrollscreens and containers start */
+.scrSpaceCol1, .scrSpaceCol2, .scrSpaceCol3{
+  	position: relative;
+  	top: 2vh;
+  	left: 0;
+  	width: 33.33%;
+  	float: left;
+  	align-content: center;	
+}
+
+.screenDivFull, .screenDivSec, .screenDivSecSpace, .spaceDiv, .spaceDiv20, .screenDiv{
+	position: relative;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+	float: left;
+}
+
+.screenDivFull{
+	height: auto;
+	align-content: center;
+}
+
+.screenDivSec{
+  	height: auto;
+  	align-content: center;
+}
+
+.screenDivSecSpace{
+  	height: 40px;
+}
+
+.spaceDiv{
+  	height: 100px;
+}
+
+.spaceDiv20{
+  	height: 20px;	
+}
+
+.spaceDivMQ{
+	display: none;
+}
+
+.screenDiv{
+	height: 20px;
+}
+
+.paraConCounters, .paraCon{
+	position: relative;
+	width: 100%;
+	float: left;
+}
+
+.paraCon{
+  	top: 0;
+  	left: 0;
+  	display: flex;
+  	justify-content: center;
+  	height: auto;
+  	cursor: pointer;
+}
+
+.paraConLogoInner{
+	position: relative;
+	top: 0;
+	width: 407px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+}
+/* scrollscreens and containers end */
+
+.counterThird1, .counterThird2, .counterThird3{
+	display: flex;
+  	justify-content: center;
+	position: relative;
+	width: 33.33%;
+	height: 100%;
+	margin: 0;
+	padding: 20px 0;
+	top: 0;
+	left: 0;
+	float: left;
+	overflow: visible;
+}
+
+.outerTableCon{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.innerTableCon{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.innerTableCol1, .innerTableCol2, .innerTableCol3{
+	position: relative;
+	width: 33.33%;
+	height: auto;
+	text-align: center;
+	float: left;
+}
+
+.tableHeadRow{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+ul{
+	color: #05004d;
+}
+
+/* countdown to deal close start */
+.timCon{  
+  	width: 100%;
+  	height: 62px !important;
+  	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+  	text-align: center;
+	background: #d0dce4;
+  	border-radius: 10px;
+	box-shadow: inset 9px 15px 7px #00026f38, inset -5px -3px 17px #fff, inset -5px -5px 7px #fff;
+}
+
+.timCon::before, .timCon::after{
+	content: "";
+	position: absolute;
+	margin-top: 3.5% !important;
+	background: #f0f6fb;
+}
+
+.timCon::before{
+	left: 11px;
+	border-radius: 100% 10% 60% 5%/ 20% 10% 30% 99%;
+	width: 10px;
+	height: 10px;
+}
+
+.timCon::after{
+	left: 10px;
+	border-radius: 50% 40% 60% 5% / 20% 10% 90% 90%;
+	width: 3px;
+	height: 20%;
+	opacity: .3;
+}
+
+/* countdown to deal close - dealHeadline */
+#dealHeadline{
+  	margin: 1.1px 0 3.8px 0;
+  	color: #05004d;
+  	font-weight: 2000;
+  	letter-spacing: 1.2px;
+  	font-size: 12px;
+  	text-transform: uppercase;
+}
+
+#days{
+	width: 18%;
+	margin: 0 3.5%;
+	height: auto;
+	float: left;
+	color: #05004d;
+	font-size: 15px;
+	font-weight: 1000;
+    letter-spacing: .3px;
+	padding: 4px 0;
+	background: #D8E5EE;
+	border-radius: 5px;
+	float: left;
+	border-radius: 5px;
+}
+
+#hours, #minutes, #seconds{
+	width: 18%;
+	margin: 0 3.5%;
+	height: auto;
+	float: left;
+	color: #6364ff;
+	font-size: 15px;
+	font-weight: 1000;
+    letter-spacing: .3px;
+	padding: 4px 0;
+	background: #D8E5EE;
+	border-radius: 5px;
+	float: left;
+	border-radius: 5px;
+}
+
+.days{
+	width: 18%;
+	margin: 0 3.5%;
+	height: auto;
+	left: 0;
+	float: left;
+	font-size: 9px;
+	font-weight: 600;
+	padding: 4px 0;
+    letter-spacing: .3px;
+	color: #fff;
+	float: left;
+}
+
+.hours, .minutes, .seconds{
+	width: 18%;
+	margin: 0 3.5%;
+	height: auto;
+	left: 0;
+	float: left;
+	font-size: 9px;
+	font-weight: 600;
+	padding: 4px 0;
+    letter-spacing: .3px;
+	color: #05004d;
+	float: left;
+}
+
+.emoji{
+  	display: none;
+  	padding: 1px;
+}
+
+.emoji span{
+  	font-size: 2.9em;
+  	padding: 20px 10px 10px 10px;
+}
+/* countdown to deal close timer end */
+
+.num{
+	font-size: 10px;
+	width: 60px;
+	margin-top: 0;
+	text-align: center;
+	color: #fff;
+	font-weight: 600;
+	float: left;
+}
+
+.text{
+  	width: 60px;
+  	color: #fff;
+  	font-size: 7px;
+  	text-align: center; 
+  	font-weight: 400;
+  	line-height: 2;
+  	float: left;
+}
+/* counter style end */
+
+/* Banner container - contains hero image SVG */
+.bannerCon{
+  	position: relative;
+  	margin: 5vh 0 0 0;
+  	width: 100%;
+  	display: flex;
+  	justify-content: center; 
+  	height: auto;
+  	float: left;
+  	align-content: center;
+}
+/* aside end */
+
+/* footer style start */
+.navFooter{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5vh;
+	background: #D8E5EE;
+	z-index: 60000;
+	-webkit-box-shadow: 8px 0 0 0 rgba(5,0,77,0.37);
+	-moz-box-shadow: 8px 0 0 0 rgba(5,0,77,0.37);
+	box-shadow: 8px 0 0 0 rgba(5,0,77,0.37);
+	box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+	-webkit-box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+	-moz-box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+}
+/* footer style end */
+
+/* disclaimer link style start */
+#CSFlink, #RWlink{
+	background-color: #D8E5EE;
+	text-decoration: none;
+	color: #05004d;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#CSFlink:hover, #RWlink:hover{
+	background: #05004d;
+	color: #fff;
+}
+
+#CSFlink2, #RWlink2{
+	background: #fff;
+	text-decoration: none;
+	color: #05004d;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#CSFlink2:hover, #RWlink2:hover{
+	background: #05004d;
+	color: #fff;
+}
+
+#CSFlinkFounder{
+	background: #b281f0;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#CSFlinkFounder:hover{
+	background: #fff;
+	color: #b281f0;
+}
+/* disclaimer link style end */
+
+@media screen and (max-width: 2300px){
+
+.days, .hours, .minutes, .seconds{
+	font-size: 7px;
+}
+}
+
+@media screen and (max-width: 2150px){
+
+.spaceDivMQ{
+	display: flex;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+	height: 80px;
+}
+
+.spaceDiv{
+	display: none !important;
+}
+}
+
+@media screen and (max-width: 1920px){
+
+.navHeader{
+	height: 6vh;
+}
+		
+.headBtnInner{
+	margin: 8px 0 0 14.7% !important;
+	top: 0;
+	left: 0;
+}	
+
+.paraConCounters{
+	margin: 0 0 2% 0;
+}
+
+.counterThird1, .counterThird2, .counterThird3{
+	height: 100%;
+}
+
+.timCon{
+	margin-top: 0 !important;
+	top: 0 !important;
+	padding-top: 0 !important;
+}
+
+.timCon::before, .timCon::after{
+	content: "";
+	position: absolute;
+	background: #f0f6fb;
+}
+
+.timCon::before{
+	top: 18.5%;
+	left: 1%;
+	border-radius: 100% 10% 60% 5%/ 20% 10% 30% 99%;
+	width: 10px;
+	height: 10px;
+}
+
+.timCon::after{
+	top: 8.5%;
+	left: 13px;
+	border-radius: 50% 40% 60% 5% / 20% 10% 90% 90%;
+	width: 3px;
+	height: 5%;
+	opacity: .3;
+}
+
+#dealHeadline{
+	font-size: 10.5px;
+	margin: 2px 0 3.8px 0;
+	padding-top: 5px;
+}
+
+.days, .hours, .minutes, .seconds{
+	font-size: 6px;
+}
+
+.logoFoot{
+    width: 100%;
+    margin: .01% 0 0 1% !important;
+    left: 0;
+}	
+}
+
+@media screen and (max-width: 1693px){
+
+#dealHeadline{
+	font-size: 9px;		
+}
+}
+
+@media screen and (max-width: 1623px){
+  
+.emoji span{
+	font-size: 2.3em;
+}  
+}
+
+@media screen and (max-width: 1595px){
+
+#dealHeadline{
+	font-size: 8px;		
+}
+
+.days, .hours, .minutes, .seconds{
+	font-size: 5.5px;
+}
+}
+
+@media screen and (max-width: 1440px){
+
+.navHeader{
+	height: 20px;
+}	
+		
+.headBtnInner, .headBtn{
+	margin: 0 !important;
+	top: 0;
+	height: 16px;
+	line-height: .5em;
+}
+		
+.headBtnInner{
+	top: 0 !important;
+	margin-top: 0 !important;
+	width: 75%;
+}	
+
+.SydSec{
+	display: none;
+}
+
+#dealHeadline{
+	margin: 0 0 2px 0;
+	font-size: 12px !important;		
+}
+
+.days, .hours, .minutes, .seconds{
+	font-size: 6.5px !important;
+}
+
+.bannerCon{
+	margin: 2vh 0 0 0;
+}
+
+.scrSpaceCol1, .scrSpaceCol3{
+    display: none;
+}
+    
+.scrSpaceCol2{
+    top: 25px;
+    width: 100%;
+}
+
+.logoFoot{
+    margin: .3% 0 0 0 !important;
+    height: 36px;
+}
+}
+
+@media screen and (max-width: 1366px){
+
+.NavThird1, .NavThird3{
+	display: none;
+}	
+
+.NavThird2{
+	width: 100%;
+	left: 0 !important;
+	margin-left: 0 !important;
+}
+
+.headBtnInner{
+	width: auto;
+	left: 0 !important;
+	margin: auto;
+}
+
+.headBtnInner h4{
+	font-size: 10px;
+	padding: auto !important;
+	line-height: auto;
+}
+
+.navFooter{
+	display: none;
+}
+
+.spaceDivMQ{
+	height: 20px;
+}
+
+.spaceDiv{
+	display: none;
+}
+}	
+
+@media screen and (max-width: 1080px){
+
+.headBtnInner{
+	font-size: 10px;
+}
+}
+
+@media  screen and (max-width: 980px){
+
+h4{
+    font-size: 2.5em;
+    font-weight: 700;
+}
+    
+p{
+    font-size: 2em;
+}
+}
+
+@media  screen and (max-width: 574px){
+
+.bannerCon{
+	margin-top: 2%;
+}
+
+#dealHeadline{
+	margin: 2px 0 4px 0;
+	padding-top: 5px;
+	font-size: 9px !important;
+}
+
+.days, .hours, .minutes, .seconds{
+	font-size: 5px !important;
+}
+
+.timCon::before{
+	top: 17.5%;
+	left: 5px !important;
+	width: 7px;
+	height: 5px;
+}
+
+.timCon::after{
+	top: 17.5%;
+	left: 5px;
+	width: 3px;
+	height: 50%;
+}
+
+h4, p{
+	font-size: medium;
+}
+}
